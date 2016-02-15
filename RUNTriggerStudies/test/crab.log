@@ -1,0 +1,140 @@
+DEBUG 2016-01-25 09:44:39,817: 	 Executing command: 'submit'
+DEBUG 2016-01-25 09:44:39,877: 	 Found CRAB cache file /uscms/home/alkahn/.crab3
+DEBUG 2016-01-25 09:44:39,902: 	 Checking credentials
+DEBUG 2016-01-25 09:44:39,903: 	 Found proxy file /tmp/x509up_u48932
+DEBUG 2016-01-25 09:44:39,903: 	 Getting proxy life time left
+DEBUG 2016-01-25 09:44:40,006: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u48932 -timeleft
+ output : 43105
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-25 09:44:40,108: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u48932 -actimeleft
+ output : 
+ error: 
+ retcode : 1
+DEBUG 2016-01-25 09:44:40,109: 	 Proxy valid for 00:00:00 hours
+DEBUG 2016-01-25 09:44:40,109: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+DEBUG 2016-01-25 09:45:11,868: 	 Executing : 
+ command : voms-proxy-init -voms cms:/cms -valid 24:00 -rfc
+ output : None
+ error: None
+ retcode : 0
+DEBUG 2016-01-25 09:45:11,972: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u48932 -timeleft
+ output : 86400
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-25 09:45:12,075: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u48932 -actimeleft
+ output : 86399
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-25 09:45:12,178: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u48932 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-25 09:45:12,178: 	 Proxy created.
+DEBUG 2016-01-25 09:45:12,205: 	 Executing command: 'submit'
+DEBUG 2016-01-25 09:45:12,215: 	 Found CRAB cache file /uscms/home/alkahn/.crab3
+DEBUG 2016-01-25 09:45:12,222: 	 Checking credentials
+DEBUG 2016-01-25 09:45:12,223: 	 Found proxy file /tmp/x509up_u48932
+DEBUG 2016-01-25 09:45:12,223: 	 Getting proxy life time left
+DEBUG 2016-01-25 09:45:12,326: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u48932 -timeleft
+ output : 86399
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-25 09:45:12,429: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u48932 -actimeleft
+ output : 86399
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-25 09:45:12,429: 	 Proxy valid for 23:59:59 hours
+DEBUG 2016-01-25 13:34:58,337: 	 Executing command: 'submit'
+DEBUG 2016-01-25 13:34:58,385: 	 Found CRAB cache file /uscms/home/alkahn/.crab3
+DEBUG 2016-01-25 13:34:58,401: 	 Checking credentials
+DEBUG 2016-01-25 13:34:58,401: 	 Found proxy file /tmp/x509up_u48932
+DEBUG 2016-01-25 13:34:58,401: 	 Getting proxy life time left
+DEBUG 2016-01-25 13:34:58,505: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u48932 -timeleft
+ output : 72613
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-25 13:34:58,608: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u48932 -actimeleft
+ output : 72613
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-25 13:34:58,608: 	 Proxy valid for 20:10:13 hours
+DEBUG 2016-01-25 13:34:58,609: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2016-02-05 06:49:43,195: 	 Executing command: 'status'
+DEBUG 2016-02-05 06:49:43,196: 	 Found CRAB cache file /uscms/home/alkahn/.crab3
+DEBUG 2016-02-05 06:49:43,213: 	 Checking credentials
+DEBUG 2016-02-05 06:49:43,213: 	 Found proxy file /tmp/x509up_u48932
+DEBUG 2016-02-05 06:49:43,213: 	 Getting proxy life time left
+DEBUG 2016-02-05 06:49:43,316: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u48932 -timeleft
+ output : 0
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-05 06:49:43,316: 	 Proxy valid for 00:00:00 hours
+DEBUG 2016-02-05 06:49:43,316: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+DEBUG 2016-02-05 06:49:47,426: 	 Executing : 
+ command : voms-proxy-init -voms cms:/cms -valid 24:00 -rfc
+ output : None
+ error: None
+ retcode : 3
+DEBUG 2016-02-05 06:49:47,530: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u48932 -timeleft
+ output : 0
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-05 06:49:47,633: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u48932 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+ERROR 2016-02-05 06:49:47,633: 	 Problems creating proxy.
+ERROR 2016-02-05 06:49:47,633: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1602/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1602/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1602/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 289, in __init__
+    self.proxyCreated = self.proxy.createNewVomsProxySimple(timeLeftThreshold = 720)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1602/lib/python2.7/site-packages/CRABClient/CredentialInteractions.py", line 152, in createNewVomsProxySimple
+    raise ProxyCreationException("Problems creating proxy.")
+ProxyCreationException: Problems creating proxy.
+DEBUG 2016-02-10 11:59:38,244: 	 Executing command: 'submit'
+DEBUG 2016-02-10 11:59:38,271: 	 Found CRAB cache file /uscms/home/alkahn/.crab3
+DEBUG 2016-02-10 11:59:39,657: 	 Checking credentials
+DEBUG 2016-02-10 11:59:39,657: 	 Found proxy file /tmp/x509up_u48932
+DEBUG 2016-02-10 11:59:39,657: 	 Getting proxy life time left
+DEBUG 2016-02-10 11:59:39,759: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u48932 -timeleft
+ output : 85066
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-10 11:59:39,862: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u48932 -actimeleft
+ output : 85066
+
+ error: 
+ retcode : 0
+DEBUG 2016-02-10 11:59:39,862: 	 Proxy valid for 23:37:46 hours
+DEBUG 2016-02-10 11:59:39,863: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).

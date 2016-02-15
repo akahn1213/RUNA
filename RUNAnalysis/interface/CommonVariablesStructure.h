@@ -132,6 +132,28 @@ inline bool checkTriggerBits( Handle<vector<string>> triggerNames, Handle<vector
 	return triggerFired;
 }	
 
+inline bool checkTriggerBitsNoHandle( vector<string> triggerNames, Handle<edm::TriggerResults> triggerBits, TString HLTtrigger  ){
+	
+	vector<float> triggerBitTree;
+
+	for (unsigned int i = 0, n = triggerBits->size(); i < n; ++i) {
+		triggerBitTree.push_back(triggerBits->accept(i));
+	}
+
+
+
+	float triggerFired = 0;
+	for (size_t t = 0; t < triggerNames.size(); t++) {
+		if ( TString( triggerNames.at(t) ).Contains( HLTtrigger ) ) {
+			triggerFired = triggerBitTree.at(t);
+			//LogWarning("triggerbit") << (*triggerNames)[t] << " " <<  (*triggerBits)[t];
+		}
+	}
+	if ( HLTtrigger.Contains( "NOTRIGGER" ) ) triggerFired = 1;
+
+	return triggerFired;
+}
+	
 inline bool checkORListOfTriggerBits( Handle<vector<string>> triggerNames, Handle<vector<float>> triggerBits, vector<string>  triggerPass  ){
 
 	vector<bool> triggersFired;
